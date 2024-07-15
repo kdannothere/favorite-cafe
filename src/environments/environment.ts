@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-googleRedirectUri: '',
+  googleRedirectUri: '',
   awsAccessKeyId: '',
   awsSecretAccessKey: '',
   googleOAuthClientID:
