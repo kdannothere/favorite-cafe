@@ -1,0 +1,12 @@
+@import "colors";
+
+.home-page {
+  width: 100%;
+  min-height: 640px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__bg {
+    width: 100%;
+  }
+}
