@@ -1,3 +1,16 @@
 <div class="home-page">
-  <img class="home-page__bg" src="/bg1.png" alt="" />
+  <div class="home-page__bg">
+    <img
+      class="home-page__bg-image"
+      [class]="prevPictureClass"
+      [src]="prevPicture"
+      alt=""
+    />
+    <img
+      class="home-page__bg-image"
+      [class]="pictureClass"
+      [src]="picture"
+      alt=""
+    />
+  </div>
 </div>

@@ -3,10 +3,49 @@
 .home-page {
   width: 100%;
   min-height: 640px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  overflow: hidden;
 
   &__bg {
     width: 100%;
+    position: absolute;
+  }
+  &__bg-image {
+    width: 100%;
+    position: absolute;
+  }
+}
+
+.animate-show {
+  @supports (animation-fill-mode: forwards) {
+    animation-name: show;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+.animate-hide {
+  @supports (animation-fill-mode: forwards) {
+    animation-name: hide;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
