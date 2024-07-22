@@ -10,7 +10,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   private slideIndex = 0;
-  private pictures = ['/bg1.png', '/bg2.png', '/bg3.png'];
+  private pictures = ['/img/bg1.png', '/img/bg2.png', '/img/bg3.png'];
   picture = this.pictures[0];
   prevPicture = this.pictures[0];
 
@@ -19,20 +19,13 @@ export class HomeComponent implements OnInit {
     return Array.from(this._pictureClass).join(' ');
   }
 
-  private _prevPictureClass: Set<string> = new Set();
-  get prevPictureClass(): string {
-    return Array.from(this._prevPictureClass).join(' ');
-  }
-
   private runSlideShow() {
     setTimeout(() => {
-      // change classes 
+      // change classes
       if (!this._pictureClass.has('animate-show')) {
         this._pictureClass.add('animate-show');
-        this._prevPictureClass.add('animate-hide');
       } else {
         this._pictureClass.delete('animate-show');
-        this._prevPictureClass.delete('animate-hide');
         this.runSlideShow();
         return;
       }
