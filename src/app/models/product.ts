@@ -11,4 +11,6 @@ export interface Product {
   isNew: boolean;
   color: string[];
   size: string[];
+  weight: number;
+  calories: number;
 }

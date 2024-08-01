@@ -1,13 +1,14 @@
 @import "colors";
 
+// keep footer visible and on the bottom of Home page
+.app__footer {
+  margin-top: 100%;
+}
+
 .home-page {
   width: 100%;
-  min-height: 640px;
-  overflow: hidden;
-
   &__bg {
     width: 100%;
-    position: absolute;
   }
   &__bg-image {
     width: 100%;

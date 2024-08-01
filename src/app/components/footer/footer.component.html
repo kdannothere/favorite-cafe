@@ -1,1 +1,42 @@
-<p>footer works!</p>
+<div class="footer">
+  <div class="footer__info">
+    <div class="footer__location footer__info-group">
+      <p class="footer__title">LOCATION</p>
+      <input
+        [formControl]="searchKey"
+        type="text"
+        placeholder="Search location..."
+        (keyup)="search()"
+      />
+      <select
+        [formControl]="currentAddress"
+        (change)="chooseCafe(currentAddress.value || '')"
+      >
+        @for (location of locations; track location) {
+        <option [value]="location" (click)="currentAddress.setValue(location)">
+          {{ location }}
+        </option>
+        } @empty {
+        <option>No locations found</option>
+        }
+      </select>
+    </div>
+    <div class="footer__contact footer-contact footer__info-group">
+      <p class="footer__title">CONTACT</p>
+      <p class="footer-contact__address">{{ currentCafe?.address }}</p>
+      <p class="footer-contact__phone">{{ currentCafe?.phones?.join("\n") }}</p>
+      <p class="footer-contact__email">{{ currentCafe?.emails?.join("\n") }}</p>
+    </div>
+    <div class="footer__hours footer-hours footer__info-group">
+      <p class="footer__title">HOURS</p>
+      <p class="footer-hours__text">{{ currentCafe?.hours }}</p>
+    </div>
+    <div class="footer__delivery footer-delivery footer__info-group">
+      <p class="footer__title">DELIVERY</p>
+      <p class="footer-delivery__text">{{ currentCafe?.delivery }}</p>
+    </div>
+  </div>
+  <div class="footer__copyright">
+    <p class="copyright__footer-text">Copyright by kdan 2024</p>
+  </div>
+</div>

@@ -1,34 +1,36 @@
-@import 'colors';
+@import "colors";
 .header {
   display: flex;
-	min-height: 64px;
+  min-height: 64px;
   flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
-	font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
 
   &__menu {
     display: flex;
     flex-flow: row wrap;
-		justify-content: center;
+    justify-content: center;
+    margin-top: 4px;
   }
 
   &__profile {
-		margin-inline: 16px;
+    margin-inline: 16px;
   }
 }
 .menu {
   &__link {
-		margin-inline: 16px;
+    margin-inline: 16px;
+    margin-block: 4px;
     cursor: pointer;
-    &:hover{
+    &:hover {
       color: $color-orange-normal;
     }
   }
 }
 .profile {
   cursor: pointer;
-  &:hover{
+  &:hover {
     color: $color-orange-normal;
   }
 }

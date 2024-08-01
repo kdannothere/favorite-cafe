@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
       this.prevPicture = this.picture;
       this.picture = this.pictures[this.slideIndex];
       this.runSlideShow();
-    }, 4000);
+    }, 2800);
   }
 
   ngOnInit() {
