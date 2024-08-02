@@ -25,10 +25,13 @@
     flex-flow: column nowrap;
     width: 150px;
     margin-inline: 16px;
+    font-size: 17px;
+    align-items: center;
   }
 
   &__location {
     input {
+      width: 100%;
       border: 2px solid #000;
       padding: 4px 8px 4px 8px;
       border-radius: 40px;
@@ -36,6 +39,7 @@
       background-color: white;
     }
     select {
+      width: 100%;
       border: 1px dashed #000;
       padding: 4px 8px 4px 8px;
       border-radius: 2px;
@@ -47,7 +51,7 @@
 
   &__title {
     margin-bottom: 24px;
-    text-align: center;
+    font-size: 19px;
   }
 
   &__contact {

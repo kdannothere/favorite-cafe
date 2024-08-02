@@ -1,4 +1,5 @@
 export interface Cafe {
+  id: string;
   address: string;
   emails: string[];
   phones: string[];

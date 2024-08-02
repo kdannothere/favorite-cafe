@@ -3,7 +3,7 @@ export interface Product {
   imgUrl: string;
   price: number;
   discount: number;
-  shops: string[];
+  cafeIds: string[];
   tags: string[];
   name: string;
   ingredients: string[];

@@ -52,9 +52,11 @@ export class FooterComponent implements OnInit {
   }
 
   private mockCafes() {
-    this.allLocations.forEach((l) => {
+    let id = 1;
+    this.allLocations.forEach((address) => {
       this.cafes.push({
-        address: l,
+        id: (id++).toString(),
+        address: address,
         emails: ['random@gmail.com'],
         phones: ['1234567890'],
         hours: 'Always open',
